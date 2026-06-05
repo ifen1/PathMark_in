@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pathmark"
+version = "0.1.0"
+description = "Watermarking for Mixture-of-Experts language models via routing-path constraints."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+keywords = ["watermarking", "moe", "mixture-of-experts", "llm", "lora"]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=2.3,<3",
+    "transformers>=4.45,<6",
+    "peft>=0.12,<0.15",
+    "accelerate>=1.0",
+    "datasets>=3.0",
+    "huggingface-hub>=0.24",
+    "sentencepiece>=0.2",
+    "numpy",
+]
+
+[project.optional-dependencies]
+quant = ["bitsandbytes>=0.46"]
+eval = ["lm-eval[hf]>=0.4"]
+test = ["pytest>=7.0"]
+
+[project.scripts]
+pathmark-train = "train:main"
+pathmark-bench = "benchmark:main"
+pathmark-attack = "attack:main"
+pathmark-prune = "prune:main"
+pathmark-latency = "latency:main"
+pathmark-routing = "routing_dist:main"
+pathmark-ppl = "ppl:main"
+
+[tool.setuptools]
+packages = ["pathmark", "pathmark.models", "pathmark.losses", "pathmark.eval"]
+
+[tool.setuptools.package-data]
+pathmark = []

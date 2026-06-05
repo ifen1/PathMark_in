@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Trained artifacts (commit only small adapters via Git LFS or HF Hub link)
+*.safetensors
+*.bin
+*.pt
+checkpoint-*/
+my_watermark*/
+runs/
+wandb/
+
+# Local experiment outputs
+results/
+logs/
+*.log
+
+# HuggingFace cache (don't commit)
+.cache/
+hf_cache/
+
+# Editor / system
+.envrc
+.venv/
+venv/
+.python-version
