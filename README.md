@@ -178,12 +178,11 @@ PathMark/
 ## Citation
 
 ```bibtex
-@inproceedings{pathmark2026,
-  title     = {{PathMark}: Protecting Intellectual Property of Mixture-of-expert LLMs via Path Watermarks},
-  booktitle = {Proceedings of the 2026 ACM SIGSAC Conference on Computer and Communications Security (CCS '26)},
-  year      = {2026},
-  publisher = {ACM},
-  address   = {The Hague, The Netherlands},
+@article{gao2026pathmark,
+  title={PathMark: Protecting Intellectual Property of Mixture-of-Expert LLMs via Path Watermarks},
+  author={Gao, Yudong and Wang, Qingyue and Yuan, Yuanyuan and Huang, Ruixuan and Chen, Linghan and Ji, Zimo and Wang, Shuai},
+  journal={arXiv preprint arXiv:2607.03688},
+  year={2026}
 }
 ```
 
